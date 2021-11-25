@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sai Sarwesh</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        body {
+            width: 100%;
+
+        }
+
+        #left {
+            width: 20%;
+            height: 2820px;
+            float: left;
+            position: fixed;
+            background-color: #4285f4;
+        }
+
+        #right {
+            float: right;
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.692);
+            height: 2820px;
+        }
+
+        #a dl li {
+            list-style-type: none;
+            padding-left: 25px;
+            font-size: xx-large;
+            padding-top: 5px;
+            padding-bottom: 25px;
+        }
+
+
+
+        .active {
+            background-color: antiquewhite;
+        }
+
+        .g {
+            font-size: x-large;
+            height: 705px;
+            padding: 10px;
+
+
+        }
+
+        .title {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            background-color: white;
+            border-radius: 4px;
+            font-size: xx-large;
+        }
+
+        a {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        img {
+            border-radius: 100%;
+            padding: 20px;
+        }
+
+        .t1 {
+            padding: 200px;
+            padding-top: 100px;
+        }
+
+        #t211 {
+            width: 48%;
+            float: left;
+            height: 200px;
+            background-color: #4285F4;
+
+        }
+
+        #t212 {
+            width: 48%;
+            float: right;
+            height: 200px;
+            background-color: #FBBC05;
+        }
+
+        .t21 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .t2 {
+            padding: 25px;
+            padding-top: 60px;
+        }
+
+        .same {
+            border-radius: 6px;
+            transition: 0.5s;
+        }
+
+        .school {
+            padding: 10px;
+        }
+
+        hr {
+            color: aliceblue;
+
+        }
+
+        .s1 {
+            float: left;
+            width: 60%;
+        }
+
+        .s2 {
+            float: right;
+            width: 40%;
+        }
+
+        #a1 {
+            width: 2%;
+            transition: width 1s;
+        }
+
+        #a1:hover {
+            width: 90%;
+        }
+
+        #a2 {
+            width: 2%;
+            transition: width 1s;
+        }
+
+        #a2:hover {
+            width: 92%;
+        }
+
+        #a3 {
+            width: 2%;
+            transition: width 1s;
+        }
+
+        #a3:hover {
+            width: 95%;
+        }
+
+        #a4 {
+            width: 2%;
+            transition: width 1s;
+        }
+
+        #a4:hover {
+            width: 94%;
+        }
+
+        #a5 {
+            width: 2%;
+            transition: width 1s;
+        }
+
+        #a5:hover {
+            width: 90%;
+        }
+
+        .ski {
+            padding: 200px;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        #abo {
+            background: linear-gradient(to bottom, #4285f4 0%, #fbbc05 100%);
+            transition: 2s;
+        }
+
+        #abo:hover {
+            background: linear-gradient(to bottom, #4285f4 100%, #fbbc05 0%);
+
+        }
+
+        #edu {
+            background: linear-gradient(to bottom, #fbbc05 0%, #34A853 100%);
+        }
+
+        #edu:hover {
+            background: linear-gradient(to bottom, #fbbc05 100%, #34A853 0%);
+        }
+
+        #smm {
+            background: linear-gradient(to bottom, #34A853 0%, #EA4335 100%);
+        }
+
+        #smm:hover {
+            background: linear-gradient(to bottom, #34A853 100%, #EA4335 0%);
+        }
+
+        #cmm {
+            background: linear-gradient(to bottom, #EA4335 0%, #4285f4 100%);
+        }
+
+        #cmm:hover {
+            background: linear-gradient(to bottom, #EA4335 100%, #4285f4 0%);
+        }
+
+        #ab {
+            background: linear-gradient(to right, #FBBC05 0%, #4285F4 100%);
+        }
+
+        #ed {
+            background: linear-gradient(to right, #FBBC05 0%, #34A853 100%);
+        }
+
+        #sm {
+            background: linear-gradient(to right, #EA4335 0%, #34A853 100%);
+        }
+
+        #cm {
+            background: linear-gradient(to right, #EA4335 0%, #4285F4 100%);
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        #py1{
+            display: none;
+        }
+        #py:hover +#py1{
+            display: block;
+        }
+        #Ja1{
+            display: none;
+        }
+        #Ja:hover +#Ja1{
+            display: block;
+        }
+        .same:hover{
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+
+            $("#abo").click(function () {
+                $("#ab").show("medium");
+
+
+            });
+
+            $("#ed").hide("");
+            $("#edu").click(function () {
+                $("#ed").show("medium");
+
+
+
+            });
+
+            $("#sm").hide("");
+            $("#smm").click(function () {
+                $("#sm").show("medium");
+
+            });
+
+            $("#cm").hide("");
+            $("#cmm").click(function () {
+                $("#cm").show("medium");
+
+            });
+        });
+
+    </script>
+    <div id="left">
+
+        <div id="im">
+            <img src="pc2.jpg">
+        </div>
+        <br>
+        <br>
+        <div id="a">
+            <dl>
+                <li id="abo"><a class="p" href="#ab">About</a></li>
+                <li id="edu"><a class="q" href="#ed">Education</a></li>
+                <li id="smm"><a class="r" href="#sm">Skills</a> </li>
+                <li id="cmm"><a class="s" href="#cm">Contact me</a></li>
+            </dl>
+        </div>
+    </div>
+    <div id="right">
+        <div class="g" id="ab">
+            <div class="title">About</div>
+            <div class="t1">
+                My name is Sai Sarwesh <br><br>
+                I am a student at Vellore Institute of Technology.
+                In my third year, I am in my fifth semester. <br> <br>
+                I was born on August 10, 2002 in Kadiri, Anantapur district,
+                Andhra Pradesh, India.<br><br>
+                My hobbies are
+                <ul>
+                    <li>Listening Music</li>
+                    <li>Playing chess</li>
+                    <li>Gaining new skills and information</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="g" id="ed">
+            <div class="title">Education</div>
+            <div class="t2">
+                <div class="t21">
+                    <div id="t211" class="same">
+                        <div class="s1">
+                            <div class="school">
+                                <h3>Sharoon English Medium School</h3>
+                                <br><br>
+                                <h4>Nursery - 3rd class</h4>
+                            </div>
+                        </div>
+                        <div class="s2">
+                            <img src="sharoon.jpg" width="150px" height="150px">
+                        </div>
+
+
+                    </div>
+                    <div id="t212" class="same">
+                        <div class="s1">
+                            <div class="school">
+                                <h3>Narayana Schools</h3>
+                                <h4>4th class - 7th class</h4>
+                                <h4>Inter- 1st and 2nd year</h4>
+                                <h6>Inter - 976/1000</h6>
+                                <h6>JEE mains - AIR 20k rank</h6>
+                                <h6>JEE advanced - AIR 19k rank</h6>
+
+                            </div>
+                        </div>
+                        <div class="s2">
+                            <img src="narayana.png" width="150px" height="150px">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="t21">
+                    <div id="t211" class="same" style="background-color: #34A853;">
+                        <div class="s1">
+                            <div class="school">
+                                <h3>Viswabharati English Medium School</h3>
+
+                                <h5>8th class - 10th class</h5>
+                                <h5>10th - 10.0 points</h5>
+                            </div>
+                        </div>
+                        <div class="s2">
+                            <img src="viswa.jfif" width="150px" height="150px">
+                        </div>
+                    </div>
+                    <div id="t212" class="same" style="background-color:  #EA4335;">
+                        <div class="s1">
+                            <div class="school">
+                                <h3>Vellore Institute Of Technology</h3>
+                                <br>
+                                <h5>VIT Rank - 4k</h5>
+                                <h5>CGPA - 8.64</h5>
+                            </div>
+                        </div>
+                        <div class="s2">
+                            <img src="vit.png" width="150px" height="150px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="g" id="sm">
+            <div class="title">Skills (Hover To Check)</div>
+            <div class="ski">
+                <ul>
+                    <li id="py">Python</li>
+                    <div id="py1">
+                        <ul>
+                            <li>
+                                Flask
+                            </li>
+                            <li>
+                                Django
+                            </li>
+                            <li>
+                                Numpy
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="a1">
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                    </div>
+                    <li id="Ja">Java</li>
+                    <div id="Ja1">
+                        <ul>
+                            <li>Basic Java</li>
+                            <li>Servlets</li>
+                            <li>JSP</li>
+                            <li>JavaFX</li>
+
+                        </ul>
+                    </div>
+                    <div id="a2">
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                    </div>
+                    <li id="HTM">HTML</li>
+                    
+                    <div id="a3">
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                    </div>
+                    <li>CSS</li>
+                    <div id="a4">
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                    </div>
+                    <li>JS</li>
+                    <div id="a5">
+                        <br>
+                        <hr>
+                        <br>
+                        <br>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="g" id="cm">
+            <div class="title">Contact Me</div>
+            <div class="t1">
+                <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/home?lang=en-in" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/uas/login?fromSignIn=true&trk=cold_join_sign_in" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
